@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title></title>
+
+    <style>
+        .field {
+            margin-bottom: 1em;
+        }
+
+            .field input.ng-invalid.ng-touched {
+                outline: none;
+                border: 2px solid red;
+            }
+
+        .validation-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div ng-controller="HomeCtrl">
+        <form name="form" novalidate>
+            <div class="field">
+                <div class="field-label">
+                    Name
+                </div>
+                <div class="field-editor">
+                    <input ng-model="name" required name="name" />
+                    <span ng-show="form.name.$invalid && (form.name.$touched || form.$submitted)" class="validation-message">Please specify a name</span>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="field-label">
+                    E-Mail
+                </div>
+                <div class="field-editor">
+                    <input type="email" ng-model="email" ng-model-options="{updateOn: 'blur'}"  name="email" required />
+                    <span ng-show="form.email.$error.required && (form.email.$touched || form.$submitted)" class="validation-message">Please specify an email</span>
+                    <span ng-show="form.email.$error.email && (form.email.$touched || form.$submitted)" class="validation-message">Please specify a valid email</span>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button ng-click="save()">Save</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="angular.js"></script>
+    <script src="App.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title></title>
+</head>
+<body>
+    <div ng-controller="HomeCtrl">
+        <div ng-include="url"></div>
+
+        <!--<div ng-include="admin && 'Admin.html'"></div>
+        <div ng-include="!admin && 'User.html'"></div>-->
+
+        <button ng-click="next()">Next</button>
+    </div>
+
+    <script src="angular.js"></script>
+    <script src="angular-sanitize.js"></script>
+    <script src="App.js"></script>
+    <script src="HomeCtrl.js"></script>
+</body>
+</html>

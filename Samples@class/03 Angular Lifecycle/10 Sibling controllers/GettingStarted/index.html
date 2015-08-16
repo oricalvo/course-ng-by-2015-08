@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title></title>
+
+    <link href="Styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div ng-controller="ListCtrl" class="view">
+        <ul>
+            <li ng-repeat="contact in contacts">
+                <span>{{contact.name}}</span>
+            </li>
+        </ul>
+    </div>
+
+    <div ng-controller="AddCtrl" class="view">
+        <input ng-model="name" /><button ng-click="add()">Add</button>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="angular.js"></script>
+    <script src="App.js"></script>
+    <script src="ListCtrl.js"></script>
+    <script src="AddCtrl.js"></script>
+</body>
+</html>

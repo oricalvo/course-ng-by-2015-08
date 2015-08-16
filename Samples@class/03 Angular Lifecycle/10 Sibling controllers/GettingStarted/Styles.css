@@ -1,0 +1,8 @@
+﻿.view {
+    border: 1px solid black;
+    padding: 1em;
+    display: inline-block;
+    width: 10em;
+    vertical-align: top;
+}
+
