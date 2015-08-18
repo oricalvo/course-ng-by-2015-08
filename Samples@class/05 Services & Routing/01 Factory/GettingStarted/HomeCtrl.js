@@ -1,21 +1,19 @@
 ﻿(function () {
     "use strict";
 
-    function HomeCtrl($scope, contactService, dateFormat) {
+    function HomeCtrl($scope, $injector, di, contactService) {
 
         $scope.message = "Hello Angular";
 
         $scope.add = function () {
-            if (!$scope.name) {
-                return;
-            }
+            //angular.module("MyApp").value("dateFormat", "dd/MM/yyyy");
 
-            var contact = {
-                id: -1,
-                name: $scope.name
-            };
+            require(["DateFormatService"], function () {
+                di.value("dateFormat", "dd/MM/yyyy");
+            });
 
-            contactService.add(contact);
+
+            $injector.get("dateFormat");
         }
 
         $scope.contacts = contactService.getAll();

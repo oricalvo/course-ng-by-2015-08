@@ -1,4 +1,4 @@
 ﻿angular.module("MyApp", [])
-    .value("dateFormat", "dd/MM/yyyy");
-
-
+    .config(function ($provide) {
+        $provide.value("di", $provide);
+    });
