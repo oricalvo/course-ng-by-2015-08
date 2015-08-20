@@ -1,0 +1,25 @@
+﻿<div>
+    <h1>Home</h1>
+
+    <div>
+        <a href="/#/about">About</a>
+    </div>
+
+    <label>
+        <input ng-model="option" type="radio" value="1" ng-change="setState('option','1')" />
+        Option 1
+    </label>
+
+    <div ng-controller="OptionsCtrl" state-name="ctrl1">
+        <label>
+            <input ng-model="option" type="radio" value="1" ng-change="setState('option','1')" />
+            Option 1
+        </label>
+
+        <label>
+            <input ng-model="option" type="radio" value="2" ng-change="setState('option','2')" />
+            Option 2
+        </label>
+    </div>
+
+</div>

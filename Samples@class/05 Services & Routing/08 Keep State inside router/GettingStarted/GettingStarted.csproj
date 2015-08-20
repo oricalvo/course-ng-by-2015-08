@@ -66,15 +66,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.html" />
-    <Content Include="angular-ui-router.js" />
+    <Content Include="angular-route.js" />
     <Content Include="angular.js" />
     <Content Include="App.js" />
     <Content Include="AboutCtrl.js" />
-    <Content Include="HomeSub1.html" />
     <Content Include="Home.html" />
+    <Content Include="OptionsCtrl.js" />
     <Content Include="HomeCtrl.js" />
     <Content Include="index.html" />
-    <Content Include="UsersModule.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
